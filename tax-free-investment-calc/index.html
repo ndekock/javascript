@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <title>Tax Free Savings Calculator</title>
+    <link rel="stylesheet" href="css/tfi-calc.css">
+</head>
+<body> 
+    <section id="contact">
+        <div class="contact-inner">
+            <h5 class="sub">by Nicolas</h5>
+        </div>
+    </section>
+    <section class="page-container">
+        <h1 class="page-title">Tax Free Investment Calculator</h1>
+        <form>
+            <div class="entry lm-entry">
+                <label class="lm">Lump Sum Investment Month:</label>
+                <select id="lump-month" type="number" name="LumpSumInvestmentMonth">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="entry la-entry">
+                <label class="la">Lump Sum Investment Amount <span> (Maximum 30000)</span>:</label>
+                <input id="lump-amount" type="number" value="0" name="LumpSumInvestmentAmount" min="0" max="30000"/>
+            </div>
+            <div class="entry dm-entry">
+                <label class="dm">Debit Order Start Month:</label>
+                <select id="debit-month" type="number" name="DebitOrderStartMonth">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="entry da-entry">
+                <label class="da">Debit Order Amount <span> (Maximum 2500)</span>:</label>
+                <input id="debit-amount" type="number" value="0" name="DebitOrderAmount" min="0" max="2500"/>
+            </div>
+            <div class="entry btn-entry">
+                <input type="button" id="btn" value="Calculate" />
+            </div>
+        </form>
+        <section class="row" id="input-error" style="display: none;">
+            <section id='error-message'></section>
+        </section>
+        <section class="row" id="result" style="display: none;">
+            <h3 class="output" id="total-contributions"></h3>
+            <h3 class="output" id="earliest-month"></h3>
+        </section>
+    </section>
+    <script src="js/tfi-calc.js"></script>
+</body>
+</html>
