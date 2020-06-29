@@ -11,12 +11,12 @@ let sequence = [1, 2];
 let nextNumber;
 let sumOfEvens = 2;
 
-for (i = 1; (sequence[i] + sequence[i-1]) < 4000000; i++) { // start loop to build Fibonacci sequence (array), max value 4000000
-	nextNumber = sequence[i] + sequence[i-1]; 				// n = (n-1) + (n-2)
-	sequence.push(nextNumber);								// add new number to sequence
-	if (nextNumber % 2 == 0) {								// if new number is even
-		sumOfEvens += nextNumber;							// add all even numbers to initial value of 2
+for (i = 1; (sequence[i] + sequence[i-1]) < 4000000; i++) {	// start loop to build Fibonacci sequence (array), max value 4000000
+	nextNumber = sequence[i] + sequence[i-1];	// n = (n-1) + (n-2)
+	sequence.push(nextNumber);	// add new number to sequence
+	if (nextNumber % 2 == 0) {	// if new number is even
+		sumOfEvens += nextNumber;	// add all even numbers to initial value of 2
 	}
 };
 //console.log(sequence);
-console.log('Sum of even numbers = ' + sumOfEvens);			// 4613732
+console.log('Sum of even numbers = ' + sumOfEvens);	// 4613732
